@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+<link rel="stylesheet" href="/style/css/homepg.css">
+<link rel="stylesheet" href="/style/css/loading.css">
+<link rel="stylesheet" href="/style/css/select.css">
+<link rel="stylesheet" type=" text/css" href="/style/CardStyle.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<link rel="stylesheet" href="/style/css/searchbar.css">
+
+
+<script src="/javascript/SearchScript.js"></script>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/logo.png" />
+
+    <title>Watch movies</title>
+  </head>
+  <body>
+   
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    
+
+    <div id="loading">
+        <svg width="200" height="200" viewBox="0 0 100 100">
+            <polyline class="line-cornered stroke-still" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+            <polyline class="line-cornered stroke-still" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+            <polyline class="line-cornered stroke-animation" points="0,0 100,0 100,100" stroke-width="10" fill="none"></polyline>
+            <polyline class="line-cornered stroke-animation" points="0,0 0,100 100,100" stroke-width="10" fill="none"></polyline>
+          </svg>
+    </div>
+      
+    <div id="page" style="display:none">
+      
+      <div class="homep" style="padding: 10pt;">
+        <div class="wrapper">
+          <input type="text" id="search-bar" class="input" 
+          placeholder="What are you looking for?">
+          <div class="searchbtn" onclick="lupa()"><i class="fas fa-search"></i></div>
+        </div>
+      </div>
+            
+            <div class="selectstyle">
+              <div class="box">
+                <select name="sort" id="sort">
+                <option value="1">By popularity</option>
+                <option value="2">Realise date</option>
+                <option value="3">Abesedic</option>
+              </select> 
+            </div> 
+          </div>
+        
+          <div class="cards">
+              <div class="l-container"></div>
+            </div>
+    </div>
+    <script type="module" src="/javascript/SearchButtonScript.js"></script>
+  </body>
+</html>

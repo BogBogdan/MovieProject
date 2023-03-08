@@ -1,0 +1,39 @@
+.episodeButton {
+    background-color: #202020;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.7);
+    transition: box-shadow 0.3s ease-in-out;
+    margin:2px;
+  }
+
+  .episodeButtonclicked {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.7);
+    transition: box-shadow 0.3s ease-in-out;
+    margin:2px;
+  }
+
+  .episodeButton:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  }
+
+  .videoplayer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+    
+}

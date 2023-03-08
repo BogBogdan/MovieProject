@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+
+
+
+<link rel="stylesheet" href="/style/css/homepg.css">
+<link rel="stylesheet" href="/style/css/select.css">
+<link rel="stylesheet" href="/style/css/watchpg.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+<link rel="stylesheet" href="/style/css/searchbar.css">
+    <meta charset="utf-8" />
+    <link rel="icon" href="/logo.png" />
+
+    <title>Watch movies</title>
+  </head>
+  <body>
+   
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="homep" style="padding: 10pt;">
+      <div class="wrapper">
+        <input type="text" id="search-bar" class="input" 
+        placeholder="What are you looking for?">
+        <div class="searchbtn" onclick="lupa()"><i class="fas fa-search"></i></div>
+      </div>
+    </div>
+  
+          <div class="selectstyle" style="
+          margin-left: 5%;">
+      
+            <div class="box" style="padding-left: 15%; padding-right: 15%;">   
+          <select name="seasons" id="my-select"></select>
+            </div>
+          </div>
+
+            <div id="episodes" style="padding-left: 15%; padding-right: 15%; padding-top: 2%;"></div>  <br>
+          <div ref="container" class="iframe-container">
+          
+            <iframe id="videoplayer" class="videoplayer" allowfullscreen></iframe>  
+          </div>
+      
+      
+          <div style="display: flex; align-items: center; background-color:#202020;">
+            <img class="slika" style=" justify-content: center; align-items: center;	max-width: 30%;
+            height: auto; padding: 2%; padding-left: 15%;  margin-right: 20px;"/>
+
+            <div  style="padding-right: 20px; padding-left: 15%; padding-right: 15%;">
+
+              <p style="justify-content: left;" class="name">Name:</p><br>
+              <p style="justify-content: left;" class="date">Date:</p><br>
+              <p class="opis"></p> 
+
+            </div>
+          </div>
+    
+    
+    <script src="/javascript/SearchScript.js"></script>
+    <script type="module" src="/javascript/WatchScript.js"></script>
+  </body>
+</html>
