@@ -2,6 +2,13 @@ export function onLoad(data) {
     const thiss=this;
     const container = document.querySelector('.l-container');
     const sort = document.getElementById("sort");
+    if(data.length==0)
+      {
+        console.log("N")
+        const nores=document.querySelector(".NoResult");
+        nores.style.display="block";
+        return;
+      }
     sortByPopularity(data);
     loadcards(container,data,this);
       sort.addEventListener("change", function() {
