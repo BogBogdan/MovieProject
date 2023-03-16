@@ -61,7 +61,7 @@ newDiv.addEventListener("click", () => {
 
 
 localStorage.setItem('show',JSON.stringify(data[i]));
-window.location.href = '/html/watchpg.html';
+window.location.href = '/page/watchpg.html';
 });
 
 

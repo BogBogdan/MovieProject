@@ -6,13 +6,13 @@ dotenv.config();
 app.use(express.static('src'));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/src/html/homepg.html');
+    res.sendFile(__dirname + '/src/page/homepg.html');
   });
 app.get('/api-key', (req, res) => {
     const apiKey = process.env.API_KEY;
     res.json({ apiKey });
   });
 
-  app.listen(3000, function() {
-  console.log('Server started on port 3000.');
+  app.listen(8080, function() {
+  console.log('Server started on port 8080.');
 }); 

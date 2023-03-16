@@ -1,15 +1,17 @@
 body {
     background-color: #252525;
     background-repeat: no-repeat;
-    background-size: cover;
-    min-width: 400px; min-height: 100vh;
+    height: 100%;
+    margin: auto;
   }
-  
+  html {
+    margin: 0;
+    height: 100%;
+}
   p {
      font-family: "Arial Black", sans-serif;
      color: #D9EB52;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+   
       display: flex;
       align-items: center;
     justify-content: center;
@@ -18,7 +20,7 @@ body {
    }
   
    .homep {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+   
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
       display: flex;
@@ -26,6 +28,7 @@ body {
     justify-content: center;
     margin: 0 auto;
    padding-bottom: 20pt;
+   font-family: Avenir, Helvetica, Arial, sans-serif;
   }
   
   .light {

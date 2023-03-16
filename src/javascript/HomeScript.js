@@ -12,6 +12,6 @@ function onClickButton (event) {
     if (event.keyCode === 13) {  //ENTER PRESSED
 
         localStorage.setItem('name',document.getElementById("search-bar").value);
-        window.location.href = '/html/resultpg.html';
+        window.location.href = '/page/resultpg.html';
      }
 }
