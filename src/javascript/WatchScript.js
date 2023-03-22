@@ -76,15 +76,13 @@ function loadEpisodes(vplayer,data,numEpisodes)
   }
 
 
-  var episodehistory=new Array;
+var episodehistory=new Array;
 window.onload=onLoad(JSON.parse(localStorage.show));
 
 var vplayer = document.querySelector('.videoplayer');
 
+
 /*
-window.addEventListener('popstate', function(event) {
-   window.location.href = '/page/resultpg.html';
-});
 vplayer.onload = async function() {
   
 
