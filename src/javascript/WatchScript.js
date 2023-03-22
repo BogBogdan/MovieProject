@@ -6,6 +6,7 @@ function onLoad(data) {
     const slika= document.querySelector('.slika');
     const select = document.getElementById("my-select");
     vplayer.src=data.link;
+    episodehistory.push(vplayer.src);
     opis.innerHTML=data.opis;
     name.innerHTML="Name:  "+data.title;
     date.innerHTML="Date:  "+data.date;
@@ -41,6 +42,7 @@ function onLoad(data) {
       arr[2] = "1"; 
       data.link = arr.join("-"); 
       vplayer.src=data.link;
+      episodehistory.push(vplayer.src);
     })
   }
 
@@ -59,18 +61,37 @@ function loadEpisodes(vplayer,data,numEpisodes)
         let arr = data.link.split("-"); 
         arr[2] = i; 
         data.link = arr.join("-");
-        document.querySelectorAll("#ep").forEach(btn =>  btn.style.backgroundColor = "");
-        movieButton.style.backgroundColor = "#D9EB52"; 
+        document.querySelectorAll(".episodeButton").forEach(btn =>  btn.style.backgroundColor = "");
         vplayer.src=data.link;
+        if(i==vplayer.src.split("-")[2])
+          movieButton.style.backgroundColor = "#D9EB52"; 
+
+          episodehistory.push(vplayer.src);
       };
-      movieButton.id = "ep";
-      if(i==1)
-      {
+      movieButton.id = "ep"+i;
+      if(i==vplayer.src.split("-")[2])
         movieButton.style.backgroundColor = "#D9EB52"; 
-      }
       episodes.appendChild(movieButton);
     }
   }
 
-  console.log(localStorage.show);
-window.onload=onLoad(JSON.parse(localStorage.show))
+
+  var episodehistory=new Array;
+window.onload=onLoad(JSON.parse(localStorage.show));
+
+var vplayer = document.querySelector('.videoplayer');
+
+/*
+window.addEventListener('popstate', function(event) {
+   window.location.href = '/page/resultpg.html';
+});
+vplayer.onload = async function() {
+  
+
+   // let prevep=episodehistory.pop()
+   if(vplayer.src!=episodehistory[episodehistory.length - 1])
+    {
+      let prevep=episodehistory.pop()
+      alert("usao"+ prevep);
+    }
+}*/
