@@ -24,3 +24,7 @@ function lupa()
         window.location.href = '/page/resultpg.html';
     }
 }
+
+window.addEventListener('popstate', function(event) {
+    window.location.href = '/page/resultpg.html';
+ });
